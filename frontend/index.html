@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Docker Intro</title>
+</head>
+
+<body>
+    <h1>Hallo aus dem Container!</h1>
+    <p id="answer"></p>
+
+    <script>
+        async function fetchData() {
+            const response = await fetch("http://localhost:3000");
+            const responseAsJson = await response.json();
+            document.getElementById("answer").textContent = responseAsJson.message
+        }
+        fetchData();
+    </script>
+
+</body>
+
+</html>

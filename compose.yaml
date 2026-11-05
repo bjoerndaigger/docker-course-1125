@@ -1,8 +1,16 @@
 services:
-  web:
-    build: .
+  frontend:
+    build: ./frontend
 
-    image: meine-seite
+    image: meine-seite-frontend
 
     ports:
       - "8080:80"
+
+  backend:
+    build: ./backend
+    
+    image: meine-seite-backend
+
+    ports:
+    - "3000:3000"
